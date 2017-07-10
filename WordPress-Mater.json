@@ -184,7 +184,7 @@
         "VPCStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": "https://awsjenkins.s3-us-west-2.amazonaws.com/Jenkins-NewVPC.template",
+                "TemplateURL": "https://s3-us-west-2.amazonaws.com/wordpress20170707/WordPress-VPC.json",
                 "Parameters": {
                     "ClassB": {
                         "Ref": "VPCClassB"
@@ -195,10 +195,10 @@
         "InstanceStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
-                "TemplateURL": "https://awsjenkins.s3-us-west-2.amazonaws.com/Jenkins-Instance.template",
+                "TemplateURL": "https://s3-us-west-2.amazonaws.com/wordpress20170707/WordPress-Instance.json",
                 "Parameters": {
                     "KeyPairName": {
-                        "Ref": ""
+                        "Ref": "KeyPairName"
                     },
                     "Subnets": {
                         "Fn::GetAtt": [
@@ -213,31 +213,31 @@
                         ]
                     },
                     "InstanceType": {
-                        "Ref": ""
+                        "Ref": "InstanceType"
                     },
                     "SSHLocation": {
-                        "Ref": ""
+                        "Ref": "SSHLocation"
                     },
                     "DBClass": {
-                        "Ref": ""
+                        "Ref": "DBClass"
                     },
                     "DBName": {
-                        "Ref": ""
+                        "Ref": "DBName"
                     },
                     "DBUser": {
-                        "Ref": ""
+                        "Ref": "DBUser"
                     },
                     "DBPassword": {
-                        "Ref": ""
+                        "Ref": "DBPassword"
                     },
                     "MultiAZDatabase": {
-                        "Ref": ""
+                        "Ref": "MultiAZDatabase"
                     },
                     "WebServerCapacity": {
-                        "Ref": ""
+                        "Ref": "WebServerCapacity"
                     },
                     "DBAllocatedStorage": {
-                        "Ref": ""
+                        "Ref": "DBAllocatedStorage"
                     }
                 }
             }
