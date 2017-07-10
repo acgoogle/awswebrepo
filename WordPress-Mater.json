@@ -1,6 +1,6 @@
 {
     "AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "(0015) - Step 1 of 3: This template deploys WordPress on AWS",
+    "Description": "(0015) -Step 1 of 3: This template deploys WordPress on AWS",
     "Parameters": {
         "VPCClassB": {
             "Description": "Class B of VPC (10.XXX.0.0/16)",
