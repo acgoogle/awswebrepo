@@ -875,7 +875,7 @@
                     }
                 ],
                 "KeyName": {
-                    "Ref": "KeyPairName"
+                    "Ref": ""
                 },
                 "UserData": {
                     "Fn::Base64": {
@@ -949,11 +949,16 @@
                 "AllocatedStorage": {
                     "Ref": "DBAllocatedStorage"
                 },
-                "DBSecurityGroups": [
+                "VPCSecurityGroups": [
                     {
                         "Ref": "DBSecurityGroup"
                     }
-                ]
+                ],
+                "DBSubnetGroupName": {
+                    "Ref": "Subnets"
+                },
+                "StorageType": "gp2"
+
             }
         }
     },
