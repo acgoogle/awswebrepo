@@ -115,8 +115,7 @@
                             "Principal": {
                                 "Service": [
                                     "events.amazonaws.com",
-                                    "budgets.amazonaws.com",
-                                    "alarms.amazonaws.com"
+                                    "budgets.amazonaws.com"
                                 ]
                             },
                             "Action": "sns:Publish",
